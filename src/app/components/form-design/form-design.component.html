@@ -1,16 +1,21 @@
-<mat-form-field>
-    <mat-label>Input</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Select</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Textarea</mat-label>
-    <textarea matInput></textarea>
-  </mat-form-field>
+<app-button-bar></app-button-bar>
+
+<mat-card>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput readonly [(ngModel)]="formValues.name">
+        </mat-form-field>
+      </div>
   
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <input matInput readonly [(ngModel)]="formValues.description">
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -22,6 +22,22 @@ import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { ProgressArrowComponent } from './progress-arrow/progress-arrow.component';
 import { FormDesignComponent } from './form-design/form-design.component';
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+
+const materialsModules = [
+  CommonModule,
+  FormsModule,
+  HttpClientModule,
+  ComponentsRoutingModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatCardModule
+];
+
 @NgModule({
   declarations: [
     ContentsComponent,
@@ -43,11 +59,6 @@ import { FormDesignComponent } from './form-design/form-design.component';
     ProgressArrowComponent,
     FormDesignComponent
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    ComponentsRoutingModule
-  ]
+  imports: [...materialsModules]
 })
 export class ComponentsModule { }

@@ -13,10 +13,6 @@ import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { ProgressArrowComponent } from './progress-arrow/progress-arrow.component';
 import { FormDesignComponent } from './form-design/form-design.component';
 
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-
 const childRoutes: Routes = [
   {
     path: '', children: [
@@ -36,20 +32,12 @@ const childRoutes: Routes = [
   }
 ];
 
-const materialsModules = [
-  MatFormFieldModule,
-  MatInputModule,
-  MatSelectModule
-];
-
 @NgModule({
   imports: [
-    RouterModule.forChild(childRoutes),
-    ...materialsModules
+    RouterModule.forChild(childRoutes)
   ],
   exports: [
-    RouterModule,
-    ...materialsModules
+    RouterModule
   ]
 })
 export class ComponentsRoutingModule { }
