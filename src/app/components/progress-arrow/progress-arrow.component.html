@@ -1,0 +1,16 @@
+<app-button-bar></app-button-bar>
+
+<h1>Progress Arrow</h1>
+<hr />
+
+  <div class="wrapper">
+    <div class="arrow-steps clearfix">
+      <div class="step" *ngFor="let data of progressItems"  
+      [ngClass]="getClass(data)"
+      (click)="onClickArrow(data)"><span>{{data.name}}</span></div>
+    </div>
+  </div>
+
+  <div *ngIf="isButtonActive()">
+    <button class="my-button" (click)="approveProgress()">Save</button>
+  </div>

@@ -1,0 +1,82 @@
+<app-button-bar></app-button-bar>
+<h1>Routing</h1>
+<h6>Click the button and watch the url to view the routing</h6>
+<div class="row">
+
+  <div class="col-12">
+    <div class="border-card">
+      <h5><strong>Absolute path</strong></h5>
+      <p>redirect to root-url + path</p>
+      <p>i.e. localhost:4200/path</p>
+      <hr />
+      <button class="card" routerLink="/routing-detail">
+        <span>routerLink="/routing-detail"</span>
+      </button>
+    </div>
+    <p>Note: Remember, the path must be available in the routing table</p>
+  </div>
+
+
+  <div class="col-12">
+    <div class="border-card">
+      <h5><strong>Relative path</strong></h5>
+      <p>redirect relative to current-url + path</p>
+      <p>i.e. localhost:4200/routing/path</p>
+      <hr />
+      <div class="center">
+        <button class="card" routerLink="routing-detail">
+          <span>routerLink="routing-detail"</span>
+        </button>
+      </div>
+      <p>Note: Remember, the relative path must be available in the routing table</p>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="border-card">
+      <h5><strong>Route Param Passing</strong></h5>
+      <label for="name">Enter Route Param Value</label>
+      <input type="text" class="form-control" id="routeparamValue" name="routeparamValue" [(ngModel)]="routeParamValue" />
+      <hr />
+      <div class="center">
+        <button class="card" routerLink="/routing-detail{{routeParamValue?'/'+routeParamValue:''}}">
+          <span>routerLink="/routing-detail{{routeParamValue?'/'+routeParamValue:''}}"</span>
+        </button>
+      </div>
+      <p>Note: You can enter any value after the url '/routing' in the address bar and click enter to redirect to detail page.</p>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="border-card">
+      <h5><strong>Query Param Passing</strong></h5>
+      <label for="name">Enter Query Param Name</label>
+      <input type="text" class="form-control" id="queryParamName" name="queryParamName" [(ngModel)]="queryParamName" />
+      <label for="name">Enter Query Param Value</label>
+      <input type="text" class="form-control" id="queryParamValue" name="queryParamValue" [(ngModel)]="queryParamValue" />
+      <hr />
+      <div class="center">
+        <button class="card" [routerLink]="getQueryParamRouterLink('url')" [queryParams]="getQueryParamRouterLink('param')">
+          <span>routerLink="routing-detail"</span>
+        </button>
+      </div>
+      <p>Note: You can enter any value in the format <br />'?paramName1=paramValue1&paramName2=paramValue2' after the url '/routing' in the address bar and click enter to redirect to detail page.</p>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="border-card">
+      <h5><strong>Hash Fragment Passing</strong></h5>
+      <label for="name">Entel Fragment Value</label>
+      <input type="text" class="form-control" id="fragmentValue" name="fragmentValue" [(ngModel)]="fragmentValue" />
+      <hr />
+      <div class="center">
+        <button class="card" routerLink="/routing-detail" [fragment]="fragmentValue">
+          <span>routerLink="routing-detail"</span>
+        </button>
+      </div>
+      <p>Note: You can enter any value in the format '#fargmentValue' after the url '/routing' in the address bar and click enter to redirect to detail page.</p>
+    </div>
+  </div>
+
+</div>

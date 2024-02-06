@@ -1,0 +1,136 @@
+<app-button-bar></app-button-bar>
+<ol>
+  <li>Installing Node.js <br /> <em><a href="https://nodejs.org/en/" target="_blank">node.js</a></em></li>
+  <li>Installing Angular CLI <br /> <em><strong>npm install @angular/cli</strong></em></li>
+  <li>Creating Angular project <br /> <em><strong>ng new my-first-app</strong></em></li>
+  <li>Build and Serve Application <br /> <em><strong>ng serve --open</strong></em></li>
+  <li>Workflow <br /> <strong>index.html</strong> → <strong>main.ts</strong> → <strong>app.module.ts</strong> → <strong>app.component.ts</strong> → <strong>app.component.html</strong></li>
+  <li>Adding Components manually and registering in app.module</li>
+  <li>Adding Components via Angular CLI <br /> <em><strong>ng generate component component-name</strong></em> or <em><strong>ng g c component-name</strong></em></li>
+  <li>Using the components with the selector as html element <br /> <strong>&lt;app-new-component&gt;&lt;/app-new-component&gt;</strong></li>
+  <!--Data Binding-->
+  <li>
+    Databinding - Communication between ts and html of a component
+    <ol>
+      <li>
+        TS → HTML<br />
+        <strong>String Interpolation</strong> : {{stringInterpolation}}<br />
+        <strong>Property Binding</strong> : {{propertyBinding}}
+      </li>
+      <li>
+        HTML → TS<br />
+        <strong>Event Binding</strong> : {{eventBinding}}
+      </li>
+      <li>
+        Combination of both<br />
+        <strong>Two-Way-Binding</strong> : {{twoWayBinding}}
+      </li>
+    </ol>
+  </li>
+  <!--Directives (Built-In)-->
+  <li>
+    Directives (Built In) - Directives are instructions to DOM
+    <ol>
+      <li>
+        <strong>Structural Directives</strong>
+        <ul>
+          <li><strong>ngIf</strong> - {{ngIfDirective}}</li>
+          <li><strong>ngFor</strong> - {{ngForDirective}}</li>
+          <li><strong>ngSwitch</strong> - {{ngSwitchDirective}}</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Attribute Directives</strong>
+        <ul>
+          <li><strong>ngStyle</strong> - {{ngStyleDirective}}</li>
+          <li><strong>ngClass</strong> - {{ngClassDirective}}</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+
+  <!--Data Binding Between Components-->
+  <li>
+    Databinding - Communication between components
+    <ol>
+      <li>
+        <strong>From Parent to Child - Property binding</strong>
+        <ul>
+          <li><strong>@Input</strong> - {{atInputProperty}}<br />{{atInputPropertyUse}}</li>
+        </ul>
+      </li>
+      <li>
+        <strong>From child to Parent - Event binding</strong>
+        <ul>
+          <li><strong>@Output</strong> - {{atOutputProperty}}<br />{{atOutputPropertyUse}}</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+
+  <!--Data Binding Between Components-->
+  <li>
+    Services - Centralizing code, Data Store and Cross-Component Communication
+    <p>Adding Service via Angular CLI <br /> <em><strong>ng generate service service-name</strong></em> or <em><strong>ng g s service-name</strong></em></p>
+  </li>
+
+  <!--Routing-->
+  <li>
+    Routing - Simulating multiple pages
+    <ol>
+      <li>
+        <strong>Absolute Path</strong>
+        <ul>
+          <li>
+            <strong>routerLink="/path1"</strong> - Navigates to path with root-path
+            <p>In Routing table : <strong>{{routingTablePath1}}</strong></p>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Relative Path</strong>
+        <ul>
+          <li>
+            <strong>routerLink="path2"</strong> - Navigates to the path relative to current-path
+            <p>In Routing table : <strong>{{routingTablePath2}}</strong></p>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Route Parameters</strong>
+        <ul>
+          <li>
+            <strong>routerLink="path3/param1/param2"</strong> - Navigates to the path which includes param1 and param2 variables
+            <p>In Routing table : <strong>{{routingTablePath3}}</strong></p>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Query Parameters</strong>
+        <ul>
+          <li>
+            <strong>routerLink="path4"</strong> - Can add '?parameter1=value1&parameter2=value2' to the route
+            <p>In Routing table : <strong>{{routingTablePath4}}</strong></p>
+            <p>Complete route will be as : <strong>'rootpath/path4?parameter1=value1&parameter2=value2'</strong></p>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Hash Fragments</strong>
+        <ul>
+          <li>
+            <strong>routerLink="path5"</strong> - Can add '#anyStringWithoutSpace' to the route
+            <p>In Routing table : <strong>{{routingTablePath5}}</strong></p>
+            <p>Complete route will be as : <strong>'rootpath/path5#anyStringWithoutSpace'</strong></p>
+          </li>
+        </ul>
+      </li>
+
+    </ol>
+  </li>
+
+</ol>

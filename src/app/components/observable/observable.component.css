@@ -1,0 +1,6 @@
+.card{
+    border: 1px solid grey;
+}
+.card:disabled{
+    background-color: gray;
+}

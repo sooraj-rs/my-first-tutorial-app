@@ -1,0 +1,12 @@
+<app-button-bar></app-button-bar>
+
+<div class="card-container">
+  <button class="card" (click)="startCounter()" [disabled]="isCounterRunning">Start</button>
+  <button class="card" (click)="stopCounter()" [disabled]="!isCounterRunning">Stop</button>
+</div>
+
+<div class="card-container">
+  <p style="font-size: 24px; font-weight: bold;">{{ counterValue }}</p>
+</div>
+
+

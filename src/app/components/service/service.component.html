@@ -1,0 +1,22 @@
+<app-button-bar></app-button-bar>
+<h1>Services</h1>
+<h6>This simulates Cross - Component communication and Data Store in service</h6>
+<div>
+  <div style="border: 2px dashed green;padding:6px;">
+    <p style="text-align:right;color:blue;">This is the FruitComponent</p>
+    <app-fruits></app-fruits>
+  </div>
+  <br />
+  <div style="border: 2px dashed blue;padding:6px;">
+    <p style="text-align:right;color:blue;">This is the VegetableComponent</p>
+    <app-vegetables></app-vegetables>
+  </div>
+
+
+  <hr />
+
+
+  <p><strong>Following are some of the farm produced corps. These names are retrived from a stored variable in CommonService</strong></p>
+  <hr />
+  <span *ngFor="let corps of producedCorps"><strong style="color:darkgreen;">{{corps}}&nbsp;&nbsp;</strong></span>
+</div>

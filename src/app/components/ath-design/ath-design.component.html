@@ -1,0 +1,32 @@
+<app-button-bar></app-button-bar>
+<h1>Ath Design</h1>
+<hr />
+
+<div class="card mb-3" *ngFor="let group of lookupGroups">
+    <div class="card-header bg-primary font-light text-bg-dark">{{group.name}}</div>
+    <div class="card-body">
+        <div class="row p-1" *ngFor="let item of group.items">
+            <div class="col-11">
+                <input [id]="'existingItemControl'+group.id+'-'+item.id" 
+                [(ngModel)]="item.name" class="form-control"
+                (focus)="checkFocus(group,item)"
+                type="text" placeholder="Default input" aria-label="default input example">
+            </div>
+            <div class="col-1">
+                <button type="button" *ngIf="!isSaveVisible(group,item)" class="btn btn-outline-secondary" (click)="deleteItem(group,item)"><i
+                        class="fa-solid fa-trash"></i></button>
+                <button type="button" *ngIf="isSaveVisible(group,item)" class="btn btn-outline-secondary" (click)="saveItem(group,item)"><i class="fa-solid fa-check"></i></button>
+            </div>
+        </div>
+        <div class="row p-1">
+            <div class="col-11">
+                <input [id]="'newItemControl'+group.id" class="form-control" type="text" placeholder="Default input"
+                    aria-label="default input example">
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-outline-secondary" (click)="addNewItem(group)"><i
+                        class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div style="border:2px dashed green;padding:6px;">
+  <p style="text-align: right; color: green;">This is parent component</p>
+  <h1>Data Binding - Between Components</h1>
+  <h3>Sample Student and Teacher Details Entry App</h3>
+  <div class="row" #party>
+    <div class="col-12">
+      <form>
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="personName" />
+        <label for="place">Place</label>
+        <input type="text" class="form-control" id="place" name="place" [(ngModel)]="personPlace" /><br />
+        <button class="btn btn-info" (click)="addAsTeacher()" [disabled]="personName==''">Add as Teacher</button>&nbsp;
+        <button class="btn btn-success" (click)="addAsStudent()">Add as Student</button>
+      </form>
+    </div>
+    <div class="col-12">
+      <app-child [personDetailsChild]="personDetails" (resetFormEmitter)="abc($event)"></app-child>
+    </div>
+  </div>
+</div>

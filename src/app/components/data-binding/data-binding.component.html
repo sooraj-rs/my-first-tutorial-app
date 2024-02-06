@@ -1,0 +1,20 @@
+<app-button-bar></app-button-bar>
+<h1>Data Binding - Between html and ts</h1>
+
+<h3>String Interpolation</h3>
+<p>{{stringInterpolationVariable}}</p>
+<hr />
+
+<h3>Property Binding</h3>
+<p>Change 'propertyBindVariable' to true to enable this button</p>
+<button class="btn btn-primary" [disabled]="propertyBindVariable">Property Button</button>
+<hr />
+
+<h3>Event Binding</h3>
+<p>A text 'Hello World' is passed from html to typescript</p>
+<button class="btn btn-primary" (click)="onEventButtonClick('Hello World Hi')">Event Button</button>
+<hr />
+
+<h3>Two-Way-Binding</h3>
+<input type="text" class="form-control" [(ngModel)]="twoWayBindingvariable" />
+<p>Value = "{{twoWayBindingvariable}}"</p>

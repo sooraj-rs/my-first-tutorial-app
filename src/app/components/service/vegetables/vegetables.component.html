@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-12">
+    <p><strong>Clicking add button will pass the vegetable name to a function in CommonService</strong></p>
+    <form>
+      <label for="name">Enter Vegetable Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="vegetableName" />
+      <button style="margin:4px;" class="btn btn-info" (click)="addVegetable()">Add Vegetable</button>&nbsp;
+    </form>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<app-button-bar></app-button-bar>
+<br />
+<div style="border:2px dashed red; padding:6px;">
+  <p style="text-align: right; color: red;">This is routing detail component</p>
+
+  <h5>Absolute or Relative path?</h5>
+  <p>This component is routed over <span style="color: darkred;"><strong>{{absoluteOrRelative}}</strong></span></p>
+  <p>Current path is <span style="color: darkred;"><strong>{{currentRoute}}</strong></span></p>
+
+  <h5>Route Parameters</h5>
+  <p *ngIf="!currentRouteParam">Current path has no "Route Parameters"</p>
+  <p *ngIf="currentRouteParam">Current path's Route paramenter is <span style="color: darkred;"><strong>{{currentRouteParam}}</strong></span></p>
+
+  <h5>Query Parameters</h5>
+  <p *ngIf="!currentQueryParam">Current path has no "Query Parameters"</p>
+  <p *ngIf="currentQueryParam">Current path's Query paramenter is <span style="color: darkred;"><strong>{{currentQueryParam}}</strong></span></p>
+
+  <h5>Hash Fragments</h5>
+  <p *ngIf="!currentHashFragment">Current path has no "Hash Fragment"</p>
+  <p *ngIf="currentHashFragment">Current path's hash fragment is <span style="color: darkred;"><strong>{{currentHashFragment}}</strong></span></p>
+
+</div>

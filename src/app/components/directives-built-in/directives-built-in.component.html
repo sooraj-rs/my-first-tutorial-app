@@ -1,0 +1,34 @@
+<app-button-bar></app-button-bar>
+
+<h1>Directives (Built-In)</h1>
+<h2>Structural Directives</h2>
+<h3>ngIf Directive</h3>
+<p *ngIf="isPragraphShown">Change 'isPragraphShown' to false to remove this paragraph.</p>
+<hr />
+
+<h3>ngFor Directive</h3>
+<p>Fruit names: </p>
+<span *ngFor="let fruit of fruitNames">[{{fruit}}]&nbsp;</span>
+<hr />
+
+<h3>ngSwitch Directive</h3>
+<p>Favourite number between 1 and 5: </p>
+<div [ngSwitch]="favouriteNumber">
+  <p *ngSwitchCase="1">"My Favourite number is 1"</p>
+  <p *ngSwitchCase="2">"My Favourite number is 2"</p>
+  <p *ngSwitchCase="3">"My Favourite number is 3"</p>
+  <p *ngSwitchCase="4">"My Favourite number is 4"</p>
+  <p *ngSwitchCase="5">"My Favourite number is 5"</p>
+  <p *ngSwitchDefault>"I dont have favourite number between 1 and 5"</p>
+</div>
+<hr />
+
+<h2>Attribute Directives</h2>
+<h3>ngStyle Directive</h3>
+<p>Change 'favouriteFontColor' value to view the difference</p>
+<p [ngStyle]="{color:favouriteFontColor}"><strong>"This is my favourite font color!"</strong></p>
+<hr />
+
+<h3>ngClass Directive</h3>
+<p>Change 'isFirstCssClass' boolean value to view the difference</p>
+<div [ngClass]="isFirstCssClass==true?'first-css-class':'second-css-class'"><strong>"Styles added paragraph"</strong></div>

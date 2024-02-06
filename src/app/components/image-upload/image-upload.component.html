@@ -1,0 +1,32 @@
+<app-button-bar></app-button-bar>
+
+<h1>Image Upload</h1>
+<hr />
+
+<!-- app.component.html -->
+<div class="button-bar">
+  <input type="file" #fileInput style="display: none;" (change)="onFileSelected($event)" accept="image/*">
+  <button class="card card-small" (click)="fileInput.click()">
+    <i class="fa-solid fa-image"></i>&nbsp;&nbsp;
+    <span>Select Image</span>
+  </button>
+  <button class="card card-small" (click)="onRemoveImage()">
+    <i class="fa-solid fa-trash-can"></i>
+    <span>Remove Image</span>
+  </button>
+</div>
+
+<div class="button-bar">
+  <button class="card card-small" (click)="onUploadAsFile()">
+    <i class="fa-solid fa-upload"></i>
+    <span>Upload As File</span>
+  </button>
+  <button class="card card-small" (click)="onUploadAsDataURI()">
+    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    <span>Upload As Data URI</span>
+  </button>
+</div>
+
+<div *ngIf="imageUrl">
+  <img [src]="imageUrl" alt="Selected Image">
+</div>

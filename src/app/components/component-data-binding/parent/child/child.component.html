@@ -1,0 +1,14 @@
+<br />
+<div style="border:2px dashed red; padding:6px;">
+  <p style="text-align: right; color: red;">This is child component</p>
+  <button class="btn btn-danger" (click)="resetForm()">Reset Form</button>
+  <br />
+  <h5>List of Students and Teacher added are shown below:</h5>
+  <div class="container">
+    <div *ngFor="let person of personDetailsChild1" style="margin:4px;">
+      <div [ngClass]="person.type=='Teacher'?'alert alert-success':'alert alert-info'" role="alert">
+        <div><b>{{person.type}}</b>&nbsp;{{person.name}} from {{person.place}}</div>
+      </div>
+    </div>
+  </div>
+</div>
