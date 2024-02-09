@@ -1,21 +1,113 @@
 <app-button-bar></app-button-bar>
 
 <mat-card>
-  <mat-card-content>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
-        <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput readonly [(ngModel)]="formValues.name">
-        </mat-form-field>
-      </div>
-  
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-        <mat-form-field>
-          <mat-label>Description</mat-label>
-          <input matInput readonly [(ngModel)]="formValues.description">
-        </mat-form-field>
-      </div>
+  <h2 class="p-0 m-0">LEAD NUMBER 38</h2>
+  <h3 class="p-0 m-0">SAUDI HEALTH COUNCIL</h3>
+  <h4 class="p-0 m-0">Government</h4>
+  <b class="p-0 m-0">Created by : Ahammed Rizvi | Referred by : -</b>
+</mat-card>
+<br>
+
+<mat-card>
+
+  <div id="progressarrowcontainer">
+    <div class="scroll-btn"> <i class="fas fa-caret-square-left" (click)="scrollLeft()"></i></div>
+    <div id="progressarrowcontent">
+        <div class="arrow-steps clearfix">
+          <div class="step" *ngFor="let data of progressItems" [ngClass]="getClass(data)" (click)="onClickArrow(data)">
+            <span>{{data.name}}</span>
+          </div>
+        </div>
     </div>
-  </mat-card-content>
+    <div class="scroll-btn"> <i class="fas fa-caret-square-right" (click)="scrollRight()"></i></div>
+    <div>&nbsp;&nbsp;</div>
+    <div class="scroll-btn"><i class="fas fa-check-circle" (click)="saveChange()"></i></div>
+  </div>
+
+    <div class="row pt-4 pb-4">
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Lead Contact</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">Mr Ahmed Moideen</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Department</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">Science</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Email</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">ahmed@gmail.com</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Lead Source</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">Seminar Class</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Mobile</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">+919878909876</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Status</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">Prospecting</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">City</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">Riyadh</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Country</div>
+      </div>
+      <div class="ccol-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">Saudi Arabia</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">State</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">Riyadh</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Address</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">St 451/258, Palm Drove, Jumeria City, Saudi Arabia</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Lead Number</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">L125255DF522</div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+        <div class="cst-label">Work Phone</div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="cst-field">+919585412563</div>
+      </div>
+
+    </div>
 </mat-card>

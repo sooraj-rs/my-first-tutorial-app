@@ -1,3 +1,138 @@
 mat-form-field {
     width: 100%;
 }
+
+/* PROGRESS ARROW BOXES */
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+.arrow-steps {
+    display: inline-flex !important;
+}
+
+.arrow-steps .step {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    cursor: default;
+    margin: 0 3px;
+    padding: 4px 4px 4px 4px;
+    min-width: 280px;
+    float: left;
+    position: relative;
+    background-color: #d9e3f7;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.arrow-steps .step:after,
+.arrow-steps .step:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 17px solid #d9e3f7;
+    z-index: 2;
+    transition: border-color 0.2s ease;
+}
+
+.arrow-steps .step:before {
+    right: auto;
+    left: 0;
+    border-left: 17px solid #fff;
+    z-index: 0;
+}
+
+.arrow-steps .step:first-child:before {
+    border: none;
+}
+
+.arrow-steps .step:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.arrow-steps .step span {
+    position: relative;
+}
+
+.arrow-steps .step.current {
+    color: #fff;
+    background-color: #677083;
+}
+
+.arrow-steps .step.current:after {
+    border-left: 17px solid #677083;
+}
+
+.arrow-steps .step.completed {
+    color: #fff;
+    background-color: #23468c;
+}
+
+.arrow-steps .step.completed:after {
+    border-left: 17px solid #23468c;
+}
+
+
+.my-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.my-button:hover {
+    background-color: #2980b9;
+}
+
+/* PROGRESS ARROW BOXES */
+
+/* SCROLL CONTAINER */
+#progressarrowcontainer {
+    display: inline-flex;
+    width: 100%;
+}
+
+#progressarrowcontent {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#progressarrowcontent::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-btn i {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* SCROLL CONTAINER   */
+
+/* LABEL and FIELD */
+.cst-label {
+    font-weight: 100;
+    color: #666;
+    padding: 6px;
+}
+
+.cst-field {
+    font-weight: bold;
+    color: #000;
+    padding: 6px;
+}
