@@ -1,0 +1,36 @@
+.box-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box {
+    position: relative;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .box-content {
+    text-align: left; /* Left-align box content */
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .arrow.up {
+    top: 10px;
+  }
+  
+  .arrow.down {
+    bottom: 10px;
+  }
+  

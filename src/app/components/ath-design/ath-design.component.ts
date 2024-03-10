@@ -14,6 +14,22 @@ export class AthDesignComponent implements OnInit {
 
   currentFocusedControl: string = "";
 
+  boxes = [
+    { name: 'Box 1', order: 0 },
+    { name: 'Box 2', order: 1 },
+    { name: 'Box 3', order: 2 },
+    { name: 'Box 4', order: 3 },
+    { name: 'Box 5', order: 4 },
+    { name: 'Box 6', order: 5 },
+    { name: 'Box 7', order: 6 },
+    { name: 'Box 8', order: 7 },
+    { name: 'Box 9', order: 8 },
+    { name: 'Box 10', order: 9 },
+    { name: 'Box 11', order: 10 },
+    { name: 'Box 12', order: 11 },
+    // Add more boxes as needed
+  ];
+
   ngOnInit(): void {
     this.lookupGroups = [];
     this.lookupItemsNames.forEach((x, i) => {
@@ -90,6 +106,34 @@ export class AthDesignComponent implements OnInit {
       return x;
     })
   }
+
+  //MANUAL SORT ORDER CODE
+ 
+  moveUp(box: any) {
+    const currentIndex = this.boxes.findIndex(b => b === box);
+    const newIndex = currentIndex - 1;
+    if (newIndex >= 0) {
+      this.swap(currentIndex, newIndex);
+    }
+  }
+
+  moveDown(box: any) {
+    const currentIndex = this.boxes.findIndex(b => b === box);
+    const newIndex = currentIndex + 1;
+    if (newIndex < this.boxes.length) {
+      this.swap(currentIndex, newIndex);
+    }
+  }
+
+  swap(currentIndex: number, newIndex: number) {
+    const tempOrder = this.boxes[currentIndex].order;
+    this.boxes[currentIndex].order = this.boxes[newIndex].order;
+    this.boxes[newIndex].order = tempOrder;
+    this.boxes = this.boxes.sort((a,b)=>a.order-b.order);
+    console.log(this.boxes)
+  }
+
+      //MANUAL SORT ORDER CODE
 
 }
 

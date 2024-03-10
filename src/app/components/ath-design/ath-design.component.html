@@ -2,7 +2,7 @@
 <h1>Ath Design</h1>
 <hr />
 
-<div class="card mb-3" *ngFor="let group of lookupGroups">
+<!-- <div class="card mb-3" *ngFor="let group of lookupGroups">
     <div class="card-header bg-primary font-light text-bg-dark">{{group.name}}</div>
     <div class="card-body">
         <div class="row p-1" *ngFor="let item of group.items">
@@ -29,4 +29,15 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
+<div class="box-list">
+    <div *ngFor="let box of boxes" class="box">
+      <div class="box-content">{{ box.name }}</div>
+      <button class="arrow up" (click)="moveUp(box)" *ngIf="box.order !== 0">↑</button>
+      <br>
+      <button class="arrow down" (click)="moveDown(box)" *ngIf="box.order !== boxes.length - 1">↓</button>
+    </div>
+  </div>
+  
