@@ -12,6 +12,7 @@ import { AthDesignComponent } from './ath-design/ath-design.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { ProgressArrowComponent } from './progress-arrow/progress-arrow.component';
 import { FormDesignComponent } from './form-design/form-design.component';
+import { ChartDesignsComponent } from './chart-designs/chart-designs.component';
 
 const childRoutes: Routes = [
   {
@@ -27,7 +28,8 @@ const childRoutes: Routes = [
       { path: 'ath-design', component: AthDesignComponent },
       { path: 'image-upload', component: ImageUploadComponent },
       { path: 'progress-arrow', component: ProgressArrowComponent },
-      { path: 'form-design', component: FormDesignComponent }
+      { path: 'form-design', component: FormDesignComponent },
+      { path: 'chart-designs', component: ChartDesignsComponent }
     ]
   }
 ];

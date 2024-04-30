@@ -22,7 +22,8 @@ export class HomeComponent implements OnInit {
     { id: 7, name: 'Ath Design', path: 'component/ath-design' },
     { id: 8, name: 'Image Upload', path: 'component/image-upload' },
     { id: 9, name: 'Progress Arrow', path: 'component/progress-arrow' },
-    { id: 10, name: 'Form Design', path: 'component/form-design' }
+    { id: 10, name: 'Form Design', path: 'component/form-design' },
+    { id: 11, name: 'Chart Designs', path: 'component/chart-designs' }
   ];
 
   constructor(private router: Router) { }

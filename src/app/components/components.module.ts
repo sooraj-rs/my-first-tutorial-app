@@ -21,11 +21,13 @@ import { ButtonBarComponent } from '../common/button-bar/button-bar.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { ProgressArrowComponent } from './progress-arrow/progress-arrow.component';
 import { FormDesignComponent } from './form-design/form-design.component';
+import { ChartDesignsComponent } from './chart-designs/chart-designs.component';
 
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
+
 
 const materialsModules = [
   CommonModule,
@@ -57,7 +59,8 @@ const materialsModules = [
     ImageUploadComponent,
     ButtonBarComponent,
     ProgressArrowComponent,
-    FormDesignComponent
+    FormDesignComponent,
+    ChartDesignsComponent
   ],
   imports: [...materialsModules]
 })
